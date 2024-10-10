@@ -28,6 +28,18 @@ requirements = [
     'matplotlib>=2.2.2'
 ]
 
+
+#Removing the original requirement by GPflo1.5 since now the code works with TF2.
+tf_cpu = 'tensorflow'
+tf_gpu = 'tensorflow-gpu'
+# Simply try importing tensorflow, without checking version
+try:
+    import tensorflow as tf
+except ImportError:
+    # Add TensorFlow to dependencies to trigger installation
+    requirements.append(tf_cpu)
+
+'''
 min_tf_version = '1.12.0'
 max_tf_version = '2.0'
 tf_cpu = 'tensorflow>={},<{}'.format(min_tf_version, max_tf_version)
@@ -51,7 +63,7 @@ try:
 except (ImportError, DeprecationWarning) as e:
     # Add TensorFlow to dependencies to trigger installation/update
     requirements.append(tf_cpu)
-
+'''
 
 packages = find_packages('.')
 package_data = {'gpflow': ['gpflow/gpflowrc']}
