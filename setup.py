@@ -39,7 +39,9 @@ tf_gpu = 'tensorflow-gpu>={},<{}'.format(min_tf_version, max_tf_version)
 
 try:
     # If tf not installed, import raises ImportError
-    import tensorflow as tf
+    # import tensorflow as tf
+    import tensorflow.compat.v1 as tf
+
     if parse_version(tf.VERSION) < parse_version(min_tf_version):
         # TF pre-installed, but below the minimum required version
         raise DeprecationWarning("TensorFlow version below minimum requirement")
