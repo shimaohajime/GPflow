@@ -13,7 +13,8 @@
 # limitations under the License.
 
 import sys
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from . import optimizer
 from .. import misc

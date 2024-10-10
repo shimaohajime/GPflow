@@ -13,10 +13,12 @@
 # limitations under the License.
 
 import itertools
-from collections import Iterable
+# from collections import Iterable
+from collections.abc import Iterable
 
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from . import settings
 from .core.errors import GPflowError

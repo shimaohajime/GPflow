@@ -20,7 +20,8 @@ from timeit import default_timer as timer
 from typing import Any, Callable, Dict, Optional, Sequence, Union
 
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from . import get_default_session
 from .models import Model

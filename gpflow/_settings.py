@@ -9,7 +9,8 @@ from collections import OrderedDict
 import configparser
 
 import numpy as np
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 
 
@@ -133,7 +134,8 @@ def _namedtuplify(mapping):
     This is what allows accessing by attribute: settings.numerics.jitter
     Thank you https://gist.github.com/hangtwenty/5960435
     """
-    if isinstance(mapping, collections.Mapping):
+    # if isinstance(mapping, collections.Mapping):
+    if isinstance(mapping, collections.abc.Mapping):
         for key, value in list(mapping.items()):
             mapping[key] = _namedtuplify(value)
         try:

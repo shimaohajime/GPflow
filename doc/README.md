@@ -1,5 +1,11 @@
 # GPflow documentation
 
+## This is based on GPflow 1.5.1, modified to work with tensorflow.compat.v1 and python3.9 and later.
+## The Modifications made are
+- In _settings.py, quadrature.py, session_manager.py, misc.py, actions.py, training/tensorflow_optimizer.py, change "import tensorflow" to "import tensorflow.compat.v1".
+- In quadrature.py, change "from collections" to "from collections.abc".
+- In _settings.py, change "collections.Mapping" to "collections.abc.Mapping".
+
 ## Online
 
 [![Documentation Status (master)](https://readthedocs.org/projects/gpflow/badge/?version=master)](http://gpflow.readthedocs.io/en/master/?badge=master)

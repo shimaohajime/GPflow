@@ -19,7 +19,8 @@ from typing import List, Union, Optional
 
 import numpy as np
 import pandas as pd
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
 
 from . import settings
 from ._version import __version__
